@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Python</title>
+  <!--favicon-->
+  <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57">
+  <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60">
+  <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="manifest" href="favicon/manifest.json">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <meta property="og:url" content="https://python.phvillanueva/index.html">
+  <meta property="og:title" content="Python Visualizations">
+  <meta property="og:description" content="Using python to win in a game of chess.">
+  <!--normalize CSS-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,600;1,400;1,600&family=PT+Sans:ital,wght@0,400;0,700;1,400&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="/styles/styles.css">
+</head>
+
+
+<body>
+
+  <div class="mobile-menu">
+    <div class="menu-title mobile-only">Python is Cool</div>
+    <input type="checkbox" id="menu-input">
+    <label for="menu-input" class="mobile-only">
+      <span class="bar top-bar"></span>
+      <span class="bar bottom-bar"></span>
+    </label>
+    <div class="main-menu">
+      <div class="site-title"><strong style="text-transform: uppercase;">Final Project</strong></div>
+      <nav class="main-nav">
+        <ul>
+          <li><a>Home</a></li>
+          <li><a href="/about/about.html">Findings</a></li>
+        </ul>
+      </nav>
+      <nav class="sub-nav">
+      </nav>
+    </div>
+  </div>
+
+  <header>
+    <div class="hero">
+      <picture>
+        <source srcset="images/marriott-1600.jpg" media="(min-width: 901px)">
+        <source srcset="images/marriott-900.jpg" media="(min-width: 501px)">
+        <source srcset="images/marriott-500.jpg" media="(max-width: 100px)">
+
+        <img src="images/marriott-500.jpg" alt="A picture of a super cool business school">
+      </picture>
+      <div class="overlay">
+        <div class="text-wrapper">
+          <div>
+            <h1>Python Analytics</h1>
+            <p>Programming, Visualizations, and Statistics to make real business decisions
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </header>
+
+
+  <main>
+    <article class="panel">
+      <div class="image-wrapper"><img src="images/4c1004cefb618b8e9e2e858a087c9dc0.jpg" alt="map" loading="lazy"></div>
+      <div class="text-wrapper left">
+        <h2>Basic information on our project</h2>
+        <p>In this analysis, we examined a dataset of chess games and their outcomes. We analyzed the factors leading to
+          winning,
+          as well as common behavior in games and in match-ups. We did this with the hope of finding ways to explain
+          wins or find
+          opportunities for more probable wins. We used only python programming, to create all of the visualizations on
+          this website.</p>
+        <a href="about/about.html" class="button">Learn More</a>
+      </div>
+    </article>
+
+    <aside class="full-width">
+      <h2>Unlike other games in which lucre is the end and aim, [chess] recommends itself to the wise by the fact that
+        its mimic battles are fought for no prize but honor. It is eminently and emphatically the philosopher’s game.
+      </h2>
+      <p style="color: var(--background-color)">&ndash; Paul Morphy (American Chess Player)</p>
+    </aside>
+    <article class="panel">
+      <div class="image-wrapper left"><img class="crop" src="images/beach-boracay-beach-sea-sunset.jpg" alt="map"
+          loading="lazy"></div>
+      <div class="text-wrapper">
+        <h2>Summary of our Conclusions</h2>
+        <p>Based upon this analysis, we can see that the rating system is not a perfect system to predict a winner.
+          There are a number of confounding factors and a variety of game types. Upon playing a couple games of chess on
+          the website, we discovered that the time limitation plays a large role in forcing people to resign rather than
+          losing by running out of time. The platform will temporarily ban you if you do not resign before you run out
+          of time.</p>
+        <p>The rating system is also flawed because of the high number of games that occur by people who have not played
+          very many games. A more accurate way of representing rating would be by including a confidence interval. Those
+          that start at a score of 1500 may have a huge confidence interval. As they begin to play more games against
+          other players that have established ratings, the confidence interval of the player’s rating will decrease.
+          This also would be a way of telling if a player begins cheating. If they begin to win against players outside
+          of their confidence interval, they could be temporarily banned from the site.</p>
+        <p>By leveraging the opening moves data, we could also assign probabilities to winning to each player as the
+          game progresses. Then, in the event of a draw or an out of time, rating points could be awarded based upon the
+          progress of the game rather than a simple tie or win.</p>
+
+
+        <h3>Chess characteristics that we analyzed</h3>
+        <p><strong>What we looked for</strong></p>
+        <dl>
+          <dt>Wins vs. Color</dt>
+          <dd>White won 50% of the time, black won 45% of the time, and the last 5% of games ended in a draw.</dd>
+          <dt>Ratings vs. Turns</dt>
+          <dd>We have found no correlation between the rating of players and how long they spend playing each game.</dd>
+          <dt>Turns vs Victory Status - Automated</dt>
+          <dd>We used ANOVA analysis and found that all significant comparisons were significant.</dd>
+          <dt>Color of Winner vs Turns to Win</dt>
+          <dd>We found that if black wins it would be with 60 turns whereas for white it is with only 56 turns.</dd>
+          <dt>Expected Wins Based on Rating Difference</dt>
+          <dd>we found that while player rating is significant, 64% of games were expected or normal based on player
+            rating, whereas 36% of games caused an upset.</dd>
+          <dt>Opening Move vs Turns to Win</dt>
+          <dd>While many other opening sequences lead to either shorter or longer games, the Hippopota sequence leads to
+            an abnormally short game.</dd>
+        </dl>
+        <a href="about/about.html" class="button">Learn More</a>
+      </div>
+    </article>
+  </main>
+
+  <div class="modal">
+    <div class="content">
+      <div class="image-wrapper">
+        <div class="loader"> </div>
+      </div>
+      <div class="text-wrapper">
+        <p>Website is not yet complete. Sorry for the inconvenience.</p>
+      </div>
+      <svg class="close-icon" viewbox="0 0 60 60">
+        <line x1="5%" y1="5%" x2="95%" y2="95%" />
+        <line x1="5%" y1="95%" x2="95%" y2="5%" />
+      </svg>
+    </div>
+  </div>
+
+  <h1>Our Team</h1>
+
+  <div class="cards">
+    <div class="card">
+      <a href="https://www.linkedin.com/in/brigham-villanueva-0321b8133/">
+        <div class="image-wrapper"><img src="/images/900luneta-park-manila.jpg" alt="Luneta Park" loading="lazy"></div>
+        <div class="text-wrapper">
+          <h2>Brigham Villanueva</h2>
+          <p>Always learning, growing, accounting</p>
+        </div>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.linkedin.com/in/ryantucker23/">
+        <div class="image-wrapper"><img src="/images/IMG_2316.JPG" alt="cone volcano" loading="lazy"></div>
+        <div class="text-wrapper">
+          <h2>Ryan Tucker</h2>
+          <p>MBA student at Brigham Young University | Intern at Dell Technologies | SQL, Python</p>
+        </div>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.linkedin.com/in/mgordon32/">
+        <div class="image-wrapper"><img src="/images/Screen Shot 2021-04-13 at 2.16.41 PM.png" alt="Chocolate Hills"
+            loading="lazy" style="object-fit:fit;">
+        </div>
+        <div class="text-wrapper">
+          <h2>Michael Gordon</h2>
+          <p>Marketing Analytics Technician at Western Digital | MBA Candidate 2021 | Marketing & Data Analytics</p>
+        </div>
+      </a>
+    </div>
+  </div>
+
+
+
+  <footer>
+    <em>Copyright @ IS505Team22-2021</em>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

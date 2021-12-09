@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About</title>
+  <link rel="apple-touch-icon" sizes="57x57" href="../favicon/apple-icon-57x57">
+  <link rel="apple-touch-icon" sizes="60x60" href="../favicon/apple-icon-60x60">
+  <link rel="apple-touch-icon" sizes="72x72" href="../favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="../favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="../favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="../favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="../favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="../favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="../favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+  <link rel="manifest" href="../favicon/manifest.json">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="../favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <meta property="og:url" content="https://seasia.phvillanueva/index.html">
+  <meta property="og:title" content="Philippine Travel">
+  <meta property="og:description"
+    content="A web page that I'm experimenting with that I hope eventually works but like idk yet  yieeee.">
+  <!--normalize CSS-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,600;1,400;1,600&family=PT+Sans:ital,wght@0,400;0,700;1,400&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../styles/styles.css">
+</head>
+
+<body class="form">
+
+  <div class="mobile-menu">
+    <div class="menu-title mobile-only">Python is cool</div>
+    <input type="checkbox" id="menu-input">
+    <label for="menu-input" class="mobile-only">
+      <span class="bar top-bar"></span>
+      <span class="bar bottom-bar"></span>
+    </label>
+    <div class="main-menu">
+      <div class="site-title"><strong style="text-transform: uppercase;">Final Project</strong></div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../about/about.html">Findings</a></li>
+          <li><a>Survey</a></li>
+        </ul>
+      </nav>
+      <nav class="sub-nav">
+
+      </nav>
+    </div>
+  </div>
+
+
+  <main>
+
+
+
+    <h1>Survey</h1>
+    <div class="form-image-wrapper">
+      <img src="../images/walkpark.svg" alt="guy walking a dog in the park" id="form">
+      <form>
+        <label for="name">Your full name:</label>
+        <input type="text" name="name" id="name">
+        <label for="email">Your email:</label>
+        <input type="email" name="email" id="email" required>
+        <label for="phone">Your phone number:</label>
+        <input type="tel" name="phone" id="phone">
+        <label for="country">Country of Origin:</label>
+        <input type="text" name="country" id="country">
+        <label for="birthdate">Birthdate:</label>
+        <input type="date" name="birthdate" id="birthdate">
+        <p class="question">Which of the following tourist attractions would you like to visit? (Check all that apply)
+        </p>
+        <input type="checkbox" id="rizal" name="views" value="rizal">
+        <label for="rizal">Rizal Park, Manila</label>
+        <input type="checkbox" id="coron" name="views" value="coron">
+        <label for="coron">Coron, Palawan</label>
+        <input type="checkbox" id="Chocolate" name="views" value="Chocolate">
+        <label for="Chocolate">Chocolate Hills, Bohol</label>
+        <input type="checkbox" id="Boracay" name="views" value="Boracay">
+        <label for="Boracay">Boracay Beach, Aklan</label>
+        <input type="checkbox" id="Banaue" name="views" value="Banaue">
+        <label for="Banaue">Banaue Rice Terraces, Ifugao</label>
+        <input type="checkbox" id="Mayon" name="views" value="Mayon">
+        <label for="Mayon">Mayon Volcano, Albay</label>
+
+        <p class="question">How many will be coming?</p>
+
+        <input type="radio" name="number" id="single" value="single">
+        <label for="single">Magisa - Single</label>
+        <input type="radio" name="number" id="couple" value="couple">
+        <label for="couple">Magasawa - Couple</label>
+        <input type="radio" name="number" id="family" value="family">
+        <label for="family">Kapamilya - Family</label>
+        <input type="radio" name="number" id="village" value="village">
+        <label for="village">Barangay - Village</label>
+        <label>Special Accommodations:</label>
+        <textarea name="special" rows="3" cols="55" placeholder="disabilities, allergies, preferences"></textarea>
+        <br>
+        <label for="goal">Goal in this trip:</label>
+        <textarea name="goal" id="goal" cols="30" rows="5"
+          placeholder="Something special you would like to do in the Philippines"></textarea>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+
+  </main>
+  <footer>
+    <em>Copyright @ IS505Team22-2021</em>
+  </footer>
+
+  <script>
+    var today = new Date();
+    var dd = today.getDate();
+    var mm = today.getMonth() + 1; //January is 0
+    var yyyy = today.getFullYear();
+    if (dd < 10) {
+      dd = '0' + dd
+    }
+    if (mm < 10) {
+      mm = '0' + mm
+    }
+
+    today = yyyy + '-' + mm + '-' + dd;
+    document.getElementById("birthdate").setAttribute("max", today);
+  </script>
+</body>
+
+</html>

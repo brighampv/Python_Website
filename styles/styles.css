@@ -1,0 +1,1043 @@
+:root {
+  /* old tree */
+  --text-color: #150e56;
+  /* fruit lime */
+  --main-color: rgb(61, 129, 255);
+  --main-color-light: #002e5d;
+  --main-color-extra-light: lightblue;
+  --standard-text: #150e56;
+  --background-color: #f6f5f5;
+  --checkbox-size: 28px;
+  /*  a custom transition timing function to replace the default ease-out  */
+  --custom-ease: cubic-bezier(0.2, 0.6, 0.3, 1);
+}
+
+body {
+  font-family: "Cabin", sans-serif;
+  font-size: 1.25rem;
+  color: #333;
+  background-color: var(--background-color);
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "PT Sans", sans-serif;
+}
+
+h1 {
+  color: var(--main-color-light);
+  font-size: 4rem;
+  line-height: 1;
+  margin-top: 2em;
+}
+
+h2,
+h3 {
+  color: var(--main-color);
+  margin-bottom: 0;
+  margin-top: 3em;
+}
+
+p {
+  color: var(--standard-text);
+  margin-bottom: 1.5rem;
+}
+
+article {
+  margin-bottom: 1.5rem;
+}
+
+footer {
+  background-color: var(--main-color);
+  color: var(--main-color-light);
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 2rem 1rem 1rem 5rem;
+  margin-top: 2rem;
+  position: relative;
+  align-self: stretch;
+}
+
+aside {
+  margin-bottom: 8rem;
+  font-size: 2rem;
+  text-align: center;
+  padding: 3rem 0;
+  background-color: var(--main-color-light);
+  color: var(--background-color);
+  margin: 6rem 0 8rem;
+}
+
+aside h2,
+aside p {
+  padding: 0 3rem;
+  margin-top: 0%;
+}
+
+/* hero image styles */
+picture img {
+  width: 100%;
+  height: 100%;
+}
+
+header {
+  margin-bottom: 5rem;
+}
+
+header div svg {
+  width: 40px;
+  stroke: ffffff;
+}
+/* form styles */
+#form {
+  width: 300px;
+}
+
+/* links */
+a {
+  user-select: none;
+}
+
+a[href]:link {
+  text-decoration: none;
+  color: var(--main-color-light);
+}
+
+a[href]:active,
+a[href]:focus {
+  background-color: var(--standard-text);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+main {
+  padding: 0 1rem;
+  max-width: 80rem;
+  align-self: center;
+}
+
+/* for the hero image */
+.hero {
+  position: relative;
+  height: 95vh;
+  width: 100vw;
+}
+
+.hero .overlay {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.hero .text-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.hero h1,
+.hero p {
+  margin: 0;
+  color: #fffbd3;
+}
+
+.hero h1 {
+  font-size: 5rem;
+  line-height: 1;
+  text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.3);
+}
+
+.hero p {
+  font-weight: bold;
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.6);
+}
+
+/* full width for aside */
+.full-width {
+  position: relative;
+  width: 100vw;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+/* for cards */
+
+a img {
+  width: 100%;
+  display: block;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1rem;
+  object-fit: cover;
+}
+
+.cards a {
+  text-decoration: none;
+  color: #555;
+  cursor: pointer;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+}
+
+.card .text-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--main-color-light);
+
+  transition: opacity 300ms ease;
+
+  opacity: 0;
+}
+
+.card:hover .text-wrapper {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.card h2,
+.card p {
+  padding: 0 1rem;
+}
+
+.card h2 {
+  margin-bottom: 0.5rem;
+  margin-top: 0rem;
+  line-height: 1;
+}
+
+.card p {
+  margin-bottom: 1.5rem;
+}
+
+.card:hover {
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.6);
+  opacity: 0.8;
+  transition: opacity 300ms ease;
+}
+
+.card a img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  max-width: 400px;
+  height: 190px;
+}
+
+.card a[href]:hover {
+  text-decoration: none;
+}
+
+/* Panels */
+.panel {
+  display: flex;
+  flex-direction: column;
+}
+
+.panel h2 {
+  margin-top: 0;
+}
+
+.panel .text-wrapper {
+  flex: 1 1 60%;
+}
+
+.panel .image-wrapper {
+  flex: 1 1 30%;
+  min-width: 150px;
+  margin-top: 1rem;
+  object-fit: cover;
+}
+
+.panel .left {
+  margin-right: 2rem;
+  order: -1;
+}
+
+/* for responsive menu */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: #e8e8e0;
+
+  /*  for codepen - size body */
+  /* height: 100vh; */
+}
+
+.mobile-menu {
+  align-self: stretch;
+  display: flex;
+
+  background-color: #fff;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 2rem;
+}
+
+.mobile-menu > .menu-title {
+  /* set flex-grow to 1 to allow menu title to expand to take up all extra space in flexbox   */
+  flex: 1 0 auto;
+  padding: 1rem;
+
+  text-transform: lowercase;
+}
+
+.mobile-menu > label {
+  /*  set label to fixed size by setting flex-grow: 0, flex-shrink: 0 and let flex-basis: 36px determine width */
+  flex: 0 0 36px;
+
+  /* use a flex box to align menu bars */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  margin-right: 1rem;
+  cursor: pointer;
+
+  /*  add a z-index so that the icon will appear on top of the mobile menu when it appears  */
+  z-index: 2;
+}
+
+/* since the label is linked to the input with for and id, we can click on the label to toggle the checkbox. Hide the checkbox. */
+.mobile-menu > input {
+  display: none;
+}
+
+/* menu bars need to be <span> so that the HTML will validate. Make them blocks so we can set width and height */
+.mobile-menu .bar {
+  display: block;
+
+  background-color: #000;
+  height: 1px;
+  width: 36px;
+
+  transition: transform 250ms var(--custom-ease), width 250ms var(--custom-ease);
+}
+
+.mobile-menu .top-bar {
+  /*  move top bar up  */
+  transform: translatey(-7px);
+}
+
+.mobile-menu .bottom-bar {
+  /*  move bottom bar down  */
+  transform: translatey(6px);
+}
+
+.mobile-menu label:hover .bar {
+  /*  add subtle cue to user when icon is hovered over  */
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.4);
+}
+
+/* styling for main menu inside mobile-menu */
+.mobile-menu .main-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  background-color: #000;
+  color: #fff;
+
+  opacity: 0;
+  z-index: 1;
+  transition: opacity 600ms var(--custom-ease);
+}
+
+/* reset the default ul styles and add animation to make the slide up  */
+.mobile-menu ul {
+  display: flex;
+
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  transform: translatey(30px);
+  opacity: 0.3;
+
+  transition: transform 600ms var(--custom-ease),
+    opacity 600ms var(--custom-ease);
+}
+
+/* since we are using the checkbox "hack" I've added a duplicate site name to make styling the fullscreen menu easier */
+.mobile-menu .site-title {
+  flex: 0 0 auto;
+  align-self: flex-start;
+  padding: 1rem;
+  text-transform: lowercase;
+}
+
+.mobile-menu .main-nav {
+  /* allow the main-nav to grow to fill any extra space */
+  flex: 1 0 auto;
+}
+
+.mobile-menu .sub-nav {
+  flex: 0 1 auto;
+  margin: 2rem 0 4rem;
+}
+
+.mobile-menu .main-nav ul {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  height: 100%;
+}
+
+/* add a short delay on the appearance of the sub nav */
+.mobile-menu .sub-nav ul {
+  transition-delay: 150ms;
+}
+
+/* basic styling for links */
+.mobile-menu a {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.mobile-menu a:hover {
+  filter: drop-shadow(0px 0px 8px #ff0);
+}
+
+.mobile-menu .main-nav a {
+  padding: 0.5rem;
+  font-size: 1.8rem;
+}
+
+.mobile-menu .sub-nav a {
+  font-size: 1.25rem;
+  padding: 0.4rem;
+}
+
+/* when the menu is displayed with its black background, change the color of the menu icon from black to white */
+.mobile-menu input[type="checkbox"]:checked + label .bar {
+  background-color: white;
+}
+
+/* when the checkbox is checked, rotate top and bottom bars to form an X. Add an extra 90 degrees so "swing" is visible */
+.mobile-menu input[type="checkbox"]:checked + label > .top-bar {
+  /* move the top bar down 1px so its center is the same as the bottom bar's center  */
+  transform: translatex(4px) translatey(1px) rotate(-135deg);
+  width: 28px;
+}
+
+.mobile-menu input[type="checkbox"]:checked + label > .bottom-bar {
+  transform: translatex(4px) rotate(135deg);
+  width: 28px;
+}
+
+.mobile-menu input[type="checkbox"]:checked ~ .main-menu {
+  opacity: 1;
+}
+
+.mobile-menu input[type="checkbox"]:checked ~ .main-menu ul {
+  opacity: 1;
+  transform: translatey(0);
+}
+
+@media screen and (min-width: 750px) {
+  /* since the mobile items are hidden, remove the flex from mobile menu. Not necessary, but keeps the CSS clean   */
+  .mobile-menu {
+    display: block;
+  }
+
+  /* class to hide mobile only elements  */
+  .mobile-menu .mobile-only {
+    display: none;
+  }
+
+  /* remove mobile settings   */
+  .mobile-menu ul {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  /* change font color for a, which usually need to override default browser font color  */
+  .mobile-menu a {
+    color: var(--main-color);
+  }
+
+  /* remove mobile settings and display main menu flexbox as row instead of column   */
+  .mobile-menu .main-menu {
+    flex-direction: row;
+    position: static;
+    opacity: 1;
+    background-color: #e8e8e0;
+    color: var(--main-color);
+  }
+
+  .mobile-menu .site-title {
+    /*  to keep site title centered on screen, let it grow more than menus  */
+    flex: 1 0 auto;
+    align-self: auto;
+    text-align: center;
+  }
+
+  /*  a trick to keep the main nav and sub nav equal widths, set flex-basis to 0, so that they have the same width and let them both grow 1. This works until the screen is narrow enough that the min-width of wider nav is hit)*/
+  .mobile-menu .main-nav {
+    flex: 1 1 0;
+    order: -1;
+  }
+
+  .mobile-menu .sub-nav {
+    flex: 1 1 0;
+    margin: 0;
+  }
+
+  /* remove animation */
+  .mobile-menu ul {
+    transition: none;
+  }
+
+  /* change flex-direction and "align left"   */
+  .mobile-menu .main-nav ul {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  /*   "align right"   */
+  .mobile-menu .sub-nav ul {
+    justify-content: flex-end;
+  }
+
+  /*  give both navs same, smaller font size and padding  */
+  .mobile-menu .main-nav a,
+  .mobile-menu .sub-nav a {
+    font-size: 1rem;
+    padding: 0.4rem;
+  }
+
+  /*  remove mobile hover filter */
+  .mobile-menu a:hover {
+    filter: none;
+  }
+
+  /*  add underline to main nav with ::after  */
+  .mobile-menu .main-nav a::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    margin-top: 3px;
+    background-color: #aaa;
+
+    /*  scale to 0 so it doesn't appear    */
+    transform: scaleX(0);
+
+    /* set transform origin to right side so that the underline grows to the right  */
+    transform-origin: right;
+    transition: transform 300ms linear;
+  }
+
+  .mobile-menu .main-nav a:hover::after {
+    /* scale to full width  */
+    transform: scaleX(1);
+
+    /* set transform origin to left side so that the underline shrinks from the left  */
+    transform-origin: left;
+  }
+
+  /*  add hover effect to sub nav  */
+  .mobile-menu .sub-nav a {
+    transition: transform 300ms var(--custom-ease);
+  }
+  .mobile-menu .sub-nav a:hover {
+    transform: translateY(-1px);
+  }
+}
+
+@media (min-width: 500px) {
+  .cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  aside {
+    font-size: 2rem;
+  }
+}
+
+/* panel breakpoint to switch to row and 40/40 flex-basis */
+@media (min-width: 600px) {
+  .panel {
+    flex-direction: row;
+  }
+
+  .panel h2 {
+    margin-top: 0;
+  }
+
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .panel img.crop {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .panel .text-wrapper {
+    flex: 1 1 40%;
+  }
+
+  .panel .image-wrapper {
+    flex: 1 1 40%;
+  }
+
+  .panel .left {
+    order: -1;
+    margin-right: 2rem;
+  }
+
+  .card p {
+    display: contents;
+  }
+}
+
+/* panel breakpoint to switch to 60/30 flex basis
+   cards breakpoint to switch to full row 
+   */
+@media (min-width: 900px) {
+  .panel .text-wrapper {
+    flex: 1 1 60%;
+  }
+
+  .panel .image-wrapper {
+    flex: 1 1 30%;
+  }
+
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .card p {
+    display: none;
+  }
+}
+
+/***** utility classes ******/
+a.button {
+  background-color: var(--main-color);
+  font-weight: bold;
+  display: inline-block;
+  padding: 1rem 2rem;
+  border-radius: 4px;
+  color: var(--main-color-light);
+}
+a.button:visited {
+  background-color: var(--main-color);
+}
+
+a.button:hover {
+  text-decoration: none;
+  opacity: 0.8;
+
+  transition: opacity 300ms ease;
+}
+
+a.button:active {
+  background-color: var(--main-color-light);
+}
+
+a.button:focus {
+  background-color: var(--main-color);
+  outline: 1px solid black;
+  box-shadow: 0 0 0 3px var(--main-color-light) inset;
+}
+
+a.button[href]:link {
+  color: var(--main-color-light);
+}
+
+/* loader image if needed */
+
+.loader {
+  border-radius: 50%;
+  width: 8rem;
+  height: 8rem;
+  border: 16px solid rgba(255, 255, 255, 0.4);
+  border-left: 16px solid var(--main-color-light);
+  animation: load 1000ms infinite linear;
+  align-self: center;
+  margin-right: 2rem;
+}
+
+@keyframes load {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* modal pop up */
+
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+.modal.show {
+  display: flex;
+  opacity: 1;
+}
+
+.modal .content {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  max-width: 650px;
+  margin: 0 1rem 3rem;
+  padding: 1rem;
+}
+
+/* modal window */
+
+.modal .close-icon {
+  flex: 0 0 30px;
+  align-self: flex-start;
+  cursor: pointer;
+}
+
+.modal .close-icon line {
+  stroke: #777;
+  stroke-width: 10px;
+  stroke-linecap: round;
+}
+
+.modal .close-icon:hover line {
+  stroke: #af543f;
+}
+
+/* form page */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body.form {
+  background-color: var(--background-color);
+  background: linear-gradient(
+    to top,
+    var(--main-color-light),
+    var(--background-color)
+  );
+  color: var(--text-color);
+  font-size: 1.5rem;
+  background-repeat: no-repeat;
+}
+
+.form h1 {
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.form main {
+  max-width: 50rem;
+  align-self: center;
+  margin: 0 1rem;
+}
+
+.form-image-wrapper {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.form img {
+  max-width: 300px;
+  min-width: 200px;
+  margin-bottom: 3rem;
+  align-self: center;
+  flex: 1 1 200px;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 0.4rem;
+}
+
+textarea,
+input {
+  color: var(--text-color);
+  border-radius: 3px;
+  border: none;
+  padding: 6px;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+}
+
+textarea:hover,
+input:hover {
+  box-shadow: 0px 0px 3px 3px var(--text-color);
+}
+
+textarea:focus,
+input:focus {
+  box-shadow: inset 0px 0px 2px 3px var(--background-color);
+}
+*/
+
+/* remove later */
+ input[type="checkbox"],
+input[type="radio"] {
+  display: none;
+}
+
+.question,
+label {
+  margin-top: 2rem;
+  margin-bottom: 0;
+}
+
+.question ~ label {
+  margin-top: 0;
+}
+
+label[for="haiku"] {
+  margin-top: 2rem;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  opacity: 0;
+  height: 0;
+}
+
+input[type="radio"] + label,
+form input[type="checkbox"] + label {
+  display: grid;
+  grid-template-columns: var(--checkbox-size) max-content;
+  grid-column-gap: calc(var(--checkbox-size) / 2);
+  align-items: center;
+}
+
+form input[type="radio"] + label::before,
+form input[type="radio"] + label::after,
+form input[type="checkbox"] + label::before,
+input[type="checkbox"] + label::after {
+  content: "";
+  display: block;
+  height: var(--checkbox-size);
+  width: var(--checkbox-size);
+  border: 2px solid var(--text-color);
+  grid-row: 1 / span 1;
+  grid-column: 1 / span 1;
+  align-self: center;
+  justify-self: center;
+}
+
+form input[type="checkbox"] + label::before {
+  border-radius: 3px;
+}
+
+input[type="radio"] + label::before {
+  border-radius: 50%;
+}
+
+input[type="radio"] + label:hover::before,
+input[type="checkbox"] + label:hover::before {
+  box-shadow: 0px 0px 3px 3px var(--main-color-light);
+}
+
+form input[type="checkbox"] + label::after {
+  /* base check dimensions on checkbox size */
+  width: calc(var(--checkbox-size) / 2.8);
+  height: calc(var(--checkbox-size) / 1.5);
+  border-color: var(--text-color);
+  border-width: calc(var(--checkbox-size) / 8);
+  border-left: none;
+  border-top: none;
+  margin-bottom: 4px;
+  transform: rotate(-40deg);
+  transition: transform 200ms ease, opacity 200ms ease;
+  opacity: 0;
+}
+
+input[type="radio"] + label::after {
+  background-color: var(--text-color);
+  border-radius: 50%;
+
+  /* width: width of ::before - 2*2px border 2*2px inset */
+  width: calc(var(--checkbox-size) - 8px);
+  height: calc(var(--checkbox-size) - 8px);
+  transform: scale(0);
+  transition: transform 200ms ease;
+}
+
+form input[type="checkbox"]:checked + label::after {
+  opacity: 1;
+  transform: rotate(40deg);
+}
+
+input[type="radio"]:checked + label::after {
+  transform: scale(1);
+}
+
+input[type="submit"] {
+  justify-self: center;
+  margin: 2rem 0 6rem;
+  border: 2px solid var(--text-color);
+  border-radius: 3px;
+  background-color: transparent;
+  color: var(--text-color);
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 0.75rem 1rem;
+  transition: background-color 300ms ease;
+}
+
+input[type="submit"] {
+  justify-self: center;
+  margin: 2rem 0 6rem;
+  border: 2px solid var(--text-color);
+  border-radius: 3px;
+  background-color: transparent;
+  color: var(--text-color);
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 0.75rem 1rem;
+  transition: background-color 300ms ease;
+}
+
+input[type="submit"]:hover {
+  background-color: var(--background-color);
+  border-color: var(--text-color);
+  box-shadow: none;
+}
+
+@media (min-width: 600px) {
+  form {
+    grid-template-columns: max-content 1fr;
+    grid-gap: 1rem;
+    /* align labels with inputs */
+    align-items: center;
+  }
+
+  input[type="submit"],
+  textarea,
+  .question ~ label,
+  .question {
+    grid-column: 2 / span 1;
+  }
+
+  label {
+    margin-top: 1;
+    justify-self: end;
+  }
+
+  input[type="submit"],
+  .question ~ label {
+    justify-self: start;
+  }
+}
+
+@media (min-width: 700px) {
+  .form-image-wrapper {
+    flex-direction: row;
+  }
+
+  .form img {
+    margin: 0;
+    align-self: flex-start;
+    margin-right: 2rem;
+  }
+
+  form {
+    grid-template-columns: max-content 1fr;
+    grid-gap: 1rem;
+  }
+
+  input[type="submit"],
+  textarea,
+  .question ~ label,
+  .question {
+    grid-column: 2 / span 1;
+  }
+
+  label {
+    margin-top: 1;
+    justify-self: end;
+  }
+
+  input[type="submit"],
+  .question ~ label {
+    justify-self: start;
+  }
+}
+
+.mobile-menu input[type="checkbox"] + label::after {
+  opacity: 0;
+}

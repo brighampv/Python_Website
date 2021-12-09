@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About</title>
+  <link rel="apple-touch-icon" sizes="57x57" href="../favicon/apple-icon-57x57">
+  <link rel="apple-touch-icon" sizes="60x60" href="../favicon/apple-icon-60x60">
+  <link rel="apple-touch-icon" sizes="72x72" href="../favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="../favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="../favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="../favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="../favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="../favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="../favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+  <link rel="manifest" href="../favicon/manifest.json">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="../favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <meta property="og:url" content="https://python.phvillanueva/index.html">
+  <meta property="og:title" content="Python Visualizations">
+  <meta property="og:description"
+    content="Using python to win in a game of chess.">
+  <!--normalize CSS-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,600;1,400;1,600&family=PT+Sans:ital,wght@0,400;0,700;1,400&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../styles/styles.css">
+</head>
+
+<body>
+
+  <div class="mobile-menu">
+    <div class="menu-title mobile-only">Python is Cool</div>
+    <input type="checkbox" id="menu-input">
+    <label for="menu-input" class="mobile-only">
+      <span class="bar top-bar"></span>
+      <span class="bar bottom-bar"></span>
+    </label>
+    <div class="main-menu">
+      <div class="site-title"><strong style="text-transform: uppercase;">Final Project</strong></div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a>Findings</a></li>
+        </ul>
+      </nav>
+      <nav class="sub-nav">
+
+      </nav>
+    </div>
+  </div>
+
+  <div class="hero" style="height: 40vh;">
+    <picture>
+      <source srcset="../images/pythonpic.jpg" media="(min-width: 901px)">
+      <source srcset="../images/pythonpic.jpg" media="(min-width: 501px)">
+      <source srcset="../images/pythonpic.jpg" media="(max-width: 100px)">
+
+      <img src="../images/pythonpic.jpg" alt="A picture of a super cool business school">
+    </picture>
+    <div class="overlay">
+      <div class="text-wrapper">
+        <div>
+          <h1>Python Findings</h1>          
+        </div>
+      </div>
+    </div>
+    </div>
+
+  <main style="margin-top: 1em;">
+    <article class="panel">
+      <div class="image-wrapper"><img src="../images/image1.png" alt="map" loading="lazy"></div>
+      <div class="text-wrapper left">
+        <h2>Wins vs Color</h2>
+        <p>White won 50% of the games in the dataset, while black won 45% of the games. The other 5% of games ended in a draw. This difference is statistically significant using a T-test with an effect size of 8.83 and a p-value of 1.09E-18.</p>
+      </div>
+    </article>
+
+    <article class="panel">
+      <div class="image-wrapper left"><img src="../images/image2.png" alt="map" loading="lazy"></div>
+      <div class="text-wrapper">
+        <h2>Ratings vs. Turns</h2>
+        <p>This last analysis led us to wonder if real time instead of turns was a dependent variable of player rating. The data gave us start and end times in epoch time in milliseconds. A simple difference between the two multiplied by 1000 gives the length in second of every game. Once again, we found no correlation between the rating of players and how long they spend playing each game. The data was roughly normally distributed and had a correlation of .098 and a p-value of 9.7E-20, letting us confidently say that a match-up of more experienced players does not change the time spent on a game.
+        </p>
+      </div>
+    </article>
+
+    <article class="panel">
+      <div class="image-wrapper"><img src="../images/automated.png" alt="map" loading="lazy"></div>
+      <div class="text-wrapper left">
+        <h2>Turns vs. Victory Status - Automated</h2>
+        <p>In chess there are 4 different ways to win a game: running out of time, a resign, a mate, or a draw. In this visualization below, we found the most likely outcome of a chess game based on the number of turns taken. We used ANOVA analysis and found that all significant comparisons were significant. Typically if a game is going to end around 85 turns then it will most likely be a draw. If a game ends at 65 turns then it will most likely be a normal checkmate or mate. If the game ends at 70 turns then most likely someone will win only because they ran out of time. And lastly, if the game ends at 52 turns or less, most likely one player resigned. 
+        </p>
+      </div>
+    </article>
+
+    <article class="panel">
+      <div class="image-wrapper left"><img src="../images/Winning_color_vs_turns.png" alt="map" loading="lazy"></div>
+      <div class="text-wrapper">
+        <h2>Color of Winner vs Turns to Win</h2>
+        <p>We found that there is a statistically significant relationship between the color of the winner and the turns it takes to win. If black wins it would be with 60 turns whereas for white it is with only 56 turns. While it is close enough that it is almost negligible, it does prove that starting the game first will give the player a 4 turn advantage compared to black to win.</p>
+      </div>
+    </article>
+
+    <article class="panel">
+      <div class="text-wrapper left">
+        <h2>Expected Wins Based on Rating Difference</h2>
+        <p>TTo calculate the rating difference we simply subtracted the higher rating against the lower rating to find the rating difference. We used python to find this rating difference. Afterwards, we compared the rating difference to the color of the winner, and using a loop, if the color with the higher rating did not win the chess game, then it would be labeled as an, “upset.” If not, then we assume it is expected and label the match as, “normal.” In the chart below we found that while player rating is significant, 64% of games were expected or normal based on player rating, whereas 36% of games caused an upset. In addition, among those games that were an upset, only 34% of them won because of a checkmate.
+        </p>
+      </div>
+      <div class="image-wrapper"><img src="../images/image3.png" alt="map" loading="lazy"></div>
+      <div class="image-wrapper"><img src="../images/image4.png" alt="map" loading="lazy"></div>
+
+    </article>
+
+    <article class="panel">
+      <div class="image-wrapper left"><img src="../images/image5.png" alt="map" loading="lazy"></div>
+      <div class="text-wrapper">
+        <h2>Opening Move vs Turns to Win</h2>
+        <p>There are well over a thousand “opening names”, many being variations on a core opening move. Based on this fact, we were able to group the 1,400 different opening names into just over 100 opening sequences. We then found the average number of turns each game took for each opening sequence, as shown below. As can be seen in this graph, the distribution of the average number of turns of each opening move is quite normally distributed with the data highly concentrated about the mean. The average number of turns is within 3 standard deviations of the mean for each of the 103 opening sequences save one: Hippopota with an average number of turns per game at just under 28. While many other opening sequences lead to either shorter or longer games, the Hippopota sequence leads to an abnormally short game.
+        </p>
+      </div>
+    </article>
+
+  
+  </main>
+
+  <footer>
+    <em>Copyright @ IS505Team22-2021</em>
+  </footer>
+
+</body>
+
+</html>
